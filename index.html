@@ -61,8 +61,9 @@
     </div>
     <figure class="hero-shot">
       <picture>
-        <!-- dark version later: <source srcset="assets/01-swiss-start-dark.jpg" media="(prefers-color-scheme: dark)"> -->
-        <img class="shot" src="assets/01-swiss-start.jpg" width="600" height="1304" fetchpriority="high" decoding="async" alt="SlimScan home screen in the red-and-white Swiss look">
+        <!-- dark version later: <source srcset="assets/01-swiss-start-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)"> -->
+        <source srcset="assets/01-swiss-start.webp" type="image/webp">
+        <img class="shot" src="assets/01-swiss-start.jpg" width="580" height="1260" fetchpriority="high" decoding="async" alt="SlimScan home screen in the Swiss look, with the buttons Scan document, ID &amp; visa photo, Photos to PDF and Shrink a big PDF">
       </picture>
     </figure>
   </div>
@@ -101,13 +102,9 @@
       </li>
     </ul>
     <ul class="screens">
-      <!-- ENABLE when assets/04-swiss-export.jpg exists (remove this comment wrapper):
-      <li><figure><picture><img class="shot" src="assets/04-swiss-export.jpg" width="600" height="1304" loading="lazy" decoding="async" alt="Export screen showing the PDF&#x27;s file size before sending"></picture><figcaption>See the size before you send</figcaption></figure></li>
-      -->
-      <!-- ENABLE when assets/08-swiss-idphoto.jpg exists (remove this comment wrapper):
-      <li><figure><picture><img class="shot" src="assets/08-swiss-idphoto.jpg" width="600" height="1304" loading="lazy" decoding="async" alt="ID photo with a plain background and the photo checks passed"></picture><figcaption>ID and visa photos, checked (iPhone)</figcaption></figure></li>
-      -->
-      <li><figure><picture><!-- dark version later: <source srcset="assets/02-swiss-pages-dark.jpg" media="(prefers-color-scheme: dark)"> --><img class="shot" src="assets/02-swiss-pages.jpg" width="600" height="1304" loading="lazy" decoding="async" alt="Page grid with scanned pages; one page is left out"></picture><figcaption>Tap a page to leave it out</figcaption></figure></li>
+      <li><figure><picture><!-- dark version later: <source srcset="assets/04-swiss-export-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)"> --><source srcset="assets/04-swiss-export.webp" type="image/webp"><img class="shot" src="assets/04-swiss-export.jpg" width="580" height="1260" loading="lazy" decoding="async" alt="Export screen: the PDF is 336 KB, under the 375 KB Email limit and 74% smaller than a normal scan, with Email, Share, Print and Save buttons"></picture><figcaption>See the size before you send</figcaption></figure></li>
+      <li><figure><picture><!-- dark version later: <source srcset="assets/09-swiss-idphoto-chooser-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)"> --><source srcset="assets/09-swiss-idphoto-chooser.webp" type="image/webp"><img class="shot" src="assets/09-swiss-idphoto-chooser.jpg" width="580" height="1260" loading="lazy" decoding="async" alt="Document chooser for ID photos: Swiss driving licence, SwissPass and residence permit first, then countries from A to Z"></picture><figcaption>ID and visa photos for online forms (iPhone)</figcaption></figure></li>
+      <li><figure><picture><!-- dark version later: <source srcset="assets/02-swiss-pages-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)"> --><source srcset="assets/02-swiss-pages.webp" type="image/webp"><img class="shot" src="assets/02-swiss-pages.jpg" width="580" height="1260" loading="lazy" decoding="async" alt="Page grid with six scanned pages; page 5 is left out, 5 of 6 selected"></picture><figcaption>Tap a page to leave it out</figcaption></figure></li>
     </ul>
   </section>
 
@@ -120,7 +117,7 @@
       </div>
       <div class="box">
         <h3>Android</h3>
-        <p>Your documents never leave the phone unless you send them. As on every Android phone, Google Play services sends Google technical diagnostics (device model, app version, performance), never your documents.</p>
+        <p>Your documents never leave your phone unless you send them. SlimScan uses Google's document scanner, part of Google Play services. As on every Android phone, Google Play services sends Google technical diagnostics (device model, app version, performance, a random install ID) – never your documents, images or text.</p>
       </div>
     </div>
     <p class="after">Made in Switzerland. SlimScan has no server, so your documents never reach us: there is nothing for us to store, lose or hand over. <a href="privacy.html">Read the privacy policy</a></p>
@@ -164,7 +161,7 @@
       </details>
       <details>
         <summary>Does SlimScan work offline?</summary>
-        <p>Yes. Scanning, shrinking and building PDFs happen on your phone, so it works in flight mode. Only buying or restoring the unlock needs a connection.</p>
+        <p>Yes. Scanning, shrinking and building PDFs happen on your phone, so it works in flight mode. Only buying or restoring the unlock needs a connection, and on Android the very first scan, which sets up Google's scanner.</p>
       </details>
       <details>
         <summary>Will my ID photo be accepted?</summary>

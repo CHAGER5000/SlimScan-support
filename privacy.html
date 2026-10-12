@@ -50,7 +50,7 @@
       <li class="pill">No account</li>
       <li class="pill">No ads</li>
     </ul>
-    <p>The short version: SlimScan has no server, so your documents never reach us. On iPhone and iPad, SlimScan collects no data at all. On Android, SlimScan itself collects nothing either, but Google's document scanner, part of Google Play services, sends Google technical diagnostics. It never sends your documents, images or text.</p>
+    <p>The short version: SlimScan has no server, so your documents never reach us. On iPhone and iPad, SlimScan collects no data at all. On Android, SlimScan itself collects nothing either. SlimScan uses Google's document scanner, part of Google Play services. As on every Android phone, Google Play services sends Google technical diagnostics (device model, app version, performance, a random install ID) – never your documents, images or text.</p>
   </div>
   <nav aria-label="On this page">
     <ul class="toc"><li><a href="#iphone">iPhone and iPad</a></li><li><a href="#android">Android</a></li><li><a href="#everyone">For everyone</a></li></ul>
@@ -80,7 +80,8 @@
   <p>On Android too, scanning, cropping and building PDFs happen on your phone. SlimScan has no server, and your documents leave the phone only when you choose to send them, for example by tapping Email, Share, Print or Save.</p>
 
   <h3>Google's document scanner and diagnostics</h3>
-  <p>As on every Android phone, Google Play services sends Google technical diagnostics. SlimScan scans with Google's ML Kit document scanner, which is part of Google Play services on your phone. The images you scan are processed on the phone and are not sent to Google or to us. To measure how the scanner performs, Google Play services sends Google:</p>
+  <p>SlimScan uses Google's document scanner, part of Google Play services. As on every Android phone, Google Play services sends Google technical diagnostics (device model, app version, performance, a random install ID) – never your documents, images or text.</p>
+  <p>The scanner is Google's ML Kit document scanner. The images you scan are processed on the phone and are not sent to Google or to us. In detail, to measure how the scanner performs, Google Play services sends Google:</p>
   <ul>
     <li>device information (manufacturer, model, Android version and build)</li>
     <li>app information (SlimScan's package name and version)</li>

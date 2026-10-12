@@ -13,20 +13,22 @@ Plain static HTML and one stylesheet: no scripts, no cookies, no web fonts, no t
 | `sitemap.xml` | The 5 public URLs. |
 
 ## Images (all in `assets/`)
-Screenshots: iPhone, Swiss look, unlocked, demo documents only. 600 px wide JPEG (quality ~82), ratio 1320 × 2868.
-If a new image has another ratio, update its `width`/`height` attributes. Never use the paywall shot (it shows a price).
+Screenshots: iPhone 6.9" captures (12 Oct 2026), Swiss look, English UI, demo documents only. Each is 580 px wide, as
+WebP (served first) plus a JPEG fallback in `<picture>`. If a replacement has another ratio than 1320 × 2868, update its
+`width`/`height` attributes (580 × 1260). Never use a paywall shot (it shows a price).
 
-| File | Where | Caption (EN) | Status |
+| File (.webp + .jpg) | Where | Caption (EN) | Source |
 |---|---|---|---|
-| `assets/01-swiss-start.jpg` | Hero, all languages | none | placeholder (older simulator shot); replace with the new capture |
-| `assets/04-swiss-export.jpg` | Screens row, 1st | See the size before you send | **missing**: add the file, then remove the `<!-- ENABLE … -->` wrapper around its `<li>` on all 4 home pages |
-| `assets/08-swiss-idphoto.jpg` | Screens row, 2nd | ID and visa photos, checked (iPhone) | **missing**: same as above |
-| `assets/02-swiss-pages.jpg` | Screens row, 3rd | Tap a page to leave it out | placeholder (older simulator shot); replace with the new capture |
-| `assets/og.png` | Social preview (1200 × 630) | text only: cross, SlimScan, headline | done |
-| `assets/apple-touch-icon.png` | Home-screen icon (180 × 180) | Swiss cross | done |
-| `assets/icon.svg` | Favicon | Swiss cross | done |
+| `assets/01-swiss-start` | Hero, all languages | none | `screenshots/01-swiss-start.png` |
+| `assets/04-swiss-export` | Screens row, 1st | See the size before you send | `screenshots/04-swiss-export.png` |
+| `assets/09-swiss-idphoto-chooser` | Screens row, 2nd | ID and visa photos for online forms (iPhone) | `screenshots/09-swiss-idphoto-chooser.png` |
+| `assets/02-swiss-pages` | Screens row, 3rd | Tap a page to leave it out | `screenshots/02-swiss-pages.png` |
+| `assets/og.png` | Social preview (1200 × 630) | text only: cross, SlimScan, headline | built from HTML |
+| `assets/apple-touch-icon.png` | Home-screen icon (180 × 180) | Swiss cross | built from HTML |
+| `assets/icon.svg` | Favicon | Swiss cross | hand-drawn |
 
-Dark-mode screenshots (optional): save as `NAME-dark.jpg` next to the light one and un-comment the
+Alt texts describe what each screenshot shows; update them on all 4 home pages if an image changes.
+Dark-mode screenshots (optional): save as `NAME-dark.webp` next to the light one and un-comment the
 `<source … media="(prefers-color-scheme: dark)">` line inside that image's `<picture>`.
 
 ## To do before publishing (merging into `main`)
