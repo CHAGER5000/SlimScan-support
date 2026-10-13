@@ -231,6 +231,12 @@ h2 + .group { margin-top: 0; }
 .screens figcaption { margin-top: 8px; font-size: 15px; color: var(--muted); text-align: center; }
 
 /* Privacy */
+/* Travel */
+.intro { margin: 0 0 16px; max-width: 68ch; }
+.ticks { margin: 0 0 16px; padding-left: 20px; max-width: 68ch; }
+.ticks li { margin-bottom: 8px; }
+#travel .fine { margin: 0; font-size: 15px; color: var(--muted); max-width: 68ch; }
+
 .split { display: grid; grid-template-columns: 1fr; gap: 16px; }
 .box { border: 1px solid var(--line); border-radius: 3px; padding: 16px 20px; }
 .box p { margin: 0; }
