@@ -343,6 +343,29 @@ footer a:hover { color: var(--accent); }
   html { scroll-behavior: smooth; }
 }
 
+/* Arabic size match: on Linux and Android the Arabic letters fall back to Noto Arabic, which draws visibly
+   smaller than the Latin words beside it (PDF, App Store, numbers). These faces scale only those fonts and only
+   Arabic characters; Apple (SF Arabic) and Windows (Segoe UI) don't match local() here and keep their own,
+   already matched, Arabic. */
+@font-face {
+  font-family: "SlimScan Arabic";
+  src: local("Noto Sans Arabic UI"), local("NotoSansArabicUI-Regular"), local("Noto Sans Arabic"), local("NotoSansArabic-Regular"),
+       local("Noto Naskh Arabic UI"), local("NotoNaskhArabicUI-Regular"), local("Noto Naskh Arabic"), local("NotoNaskhArabic-Regular");
+  font-weight: 100 599;
+  size-adjust: 115%;
+  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF;
+}
+@font-face {
+  font-family: "SlimScan Arabic";
+  src: local("Noto Sans Arabic UI Bold"), local("NotoSansArabicUI-Bold"), local("Noto Sans Arabic Bold"), local("NotoSansArabic-Bold"),
+       local("Noto Naskh Arabic UI Bold"), local("NotoNaskhArabicUI-Bold"), local("Noto Naskh Arabic Bold"), local("NotoNaskhArabic-Bold");
+  font-weight: 600 900;
+  size-adjust: 115%;
+  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF;
+}
+:root:lang(ar) { --sans: "SlimScan Arabic", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif; }
+.langs a[lang="ar"] { font-family: "SlimScan Arabic", var(--sans); }
+
 /* Arabic (right to left): letter-spacing breaks joined Arabic letters. */
 /* !important: must also beat more specific rules such as .langs a. */
 [dir="rtl"] *, [lang="ar"] { letter-spacing: 0 !important; }
