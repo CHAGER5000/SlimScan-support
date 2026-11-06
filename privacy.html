@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy – SlimScan</title>
-<meta name="description" content="SlimScan's privacy policy. SlimScan has no server and your documents never reach us. On iPhone it collects no data; on Android, Google Play services sends Google technical diagnostics, never your documents.">
+<meta name="description" content="SlimScan's privacy policy. SlimScan has no server and your documents never reach us. It collects no data on iPhone, iPad or Android; on Android, Google's ML Kit sends Google technical diagnostics, never your documents.">
 <meta name="color-scheme" content="light dark">
 <link rel="canonical" href="https://chager5000.github.io/SlimScan-support/privacy.html">
 <meta property="og:type" content="website">
@@ -41,16 +41,17 @@
 
   <main id="main" class="doc">
   <h1>Privacy Policy</h1>
-  <p class="dek">Last updated 12 October 2026</p>
+  <p class="dek">Last updated 6 November 2026</p>
 
   <div class="summary">
     <ul class="pills">
-      <li class="pill">iPhone: no data collected</li>
+      <li class="pill">No data collected by us</li>
       <li class="pill">Android: documents stay on the phone</li>
       <li class="pill">No account</li>
+      <li class="pill">No analytics</li>
       <li class="pill">No ads</li>
     </ul>
-    <p>The short version: SlimScan has no server, so your documents never reach us. On iPhone and iPad, SlimScan collects no data at all. On Android, SlimScan itself collects nothing either. SlimScan uses Google's document scanner, part of Google Play services. As on every Android phone, Google Play services sends Google technical diagnostics (device model, app version, performance, a random install ID) – never your documents, images or text.</p>
+    <p>The short version: SlimScan has no server, so your documents never reach us. On iPhone and iPad, SlimScan collects no data at all. On Android, SlimScan itself collects nothing either. SlimScan uses Google's ML Kit, which includes Google's document scanner (part of Google Play services). ML Kit sends Google technical diagnostics (device model, app version, performance, a random install ID) – never your documents, images or text.</p>
   </div>
   <nav aria-label="On this page">
     <ul class="toc"><li><a href="#iphone">iPhone and iPad</a></li><li><a href="#android">Android</a></li><li><a href="#everyone">For everyone</a></li></ul>
@@ -79,28 +80,30 @@
   <h3>What SlimScan does with your documents</h3>
   <p>On Android too, scanning, cropping and building PDFs happen on your phone. SlimScan has no server, and your documents leave the phone only when you choose to send them, for example by tapping Email, Share, Print or Save.</p>
 
-  <h3>Google's document scanner and diagnostics</h3>
-  <p>SlimScan uses Google's document scanner, part of Google Play services. As on every Android phone, Google Play services sends Google technical diagnostics (device model, app version, performance, a random install ID) – never your documents, images or text.</p>
-  <p>The scanner is Google's ML Kit document scanner. The images you scan are processed on the phone and are not sent to Google or to us. In detail, to measure how the scanner performs, Google Play services sends Google:</p>
+  <h3>Google's ML Kit and diagnostics</h3>
+  <p>On Android, SlimScan uses Google's ML Kit for the document scanner and for on-device image features such as text recognition and photo checks. The document scanner is provided by Google Play services on your phone. Your images are processed on the phone and are not sent to Google or to us. To measure how ML Kit performs, it sends Google a small amount of technical diagnostic and usage data:</p>
   <ul>
-    <li>device information (manufacturer, model, Android version and build)</li>
+    <li>device information (manufacturer, model, Android version and build, available ML hardware)</li>
     <li>app information (SlimScan's package name and version)</li>
-    <li>a device identifier and per-installation identifiers, which Google states are not meant to identify you as a person</li>
-    <li>performance details (for example how long a scan took, image size and format, error codes)</li>
+    <li>a device identifier and per-installation identifiers, which Google states are not intended to identify you as a person</li>
+    <li>performance and configuration details (for example how long a scan took, image format and resolution, input/output size, feature version, event type and error codes)</li>
   </ul>
-  <p>Google uses this data for diagnostics and usage statistics, encrypts it in transit, and states that it does not pass it to third parties. We never receive it and cannot see it. It never contains your documents, images or text. See <a href="https://developers.google.com/ml-kit/android-data-disclosure" rel="noopener">Google's ML Kit data disclosure</a> and <a href="https://policies.google.com/privacy" rel="noopener">Google's privacy policy</a>.</p>
+  <p>Google uses this data for diagnostics and usage analytics, encrypts it in transit (HTTPS), and states that it does not pass it to third parties. We never receive it and cannot see it. It never contains your documents, images or text. See <a href="https://developers.google.com/ml-kit/android-data-disclosure" rel="noopener">Google's ML Kit data disclosure</a> and <a href="https://policies.google.com/privacy" rel="noopener">Google's privacy policy</a>.</p>
 
-  <h3>Purchases</h3>
+  <h3>Analytics, tracking, and advertising</h3>
+  <p>None of our own. SlimScan for Android contains no analytics framework, no advertising SDK, no crash reporter that phones home, and no tracking pixels. The only data sent is the ML Kit diagnostics described above, which go to Google; we never receive them.</p>
+
+  <h3>Purchases on Android</h3>
   <p>The one-time unlock ("Unlock SlimScan") is sold through Google Play Billing. Google Play processes the payment under its own privacy policy; SlimScan never sees your payment details, name or email address. The app only asks Google Play whether your Google account owns the unlock, and remembers the answer on the phone. That answer is left out of Android backups, so it is checked again with Google Play on each new phone.</p>
 
   <h3>Rating prompt</h3>
   <p>After your third PDF, SlimScan may ask Google Play once to show its rating sheet. Google Play decides whether it appears and handles any rating you give under its own policy.</p>
 
   <h3>Permissions</h3>
-  <p>SlimScan for Android asks for no camera, storage, contacts or location permission. The camera is run by Google's scanner; photos are picked with Android's photo picker, which gives SlimScan only the images you choose; PDFs are saved to your Downloads folder with Android's standard file tools. Internet access is used only by Google Play services (the diagnostics above) and Google Play (purchases and the rating sheet). SlimScan itself makes no network requests.</p>
+  <p>SlimScan for Android asks for camera permission for the ID &amp; visa photo camera; it does not request storage, contacts or location permissions. The document scanner's camera is operated by Google's scanner. Photos are picked with Android's system photo picker, which only gives SlimScan the images you select, and PDFs are saved to your Downloads folder through Android's standard file system. The app has internet permission because Google software it includes needs it: ML Kit, to send the diagnostic data described above, and Google Play Billing, for the unlock. SlimScan's own code never connects to the internet and never uploads your files.</p>
 
   <h3>Data shared with third parties</h3>
-  <p>We do not share, sell, or rent any data, because we do not collect any. On Android, Google is involved for app distribution (Google Play), for the purchase (Google Play Billing) and for the scanner diagnostics described above.</p>
+  <p>We do not share, sell, or rent any data, because we do not collect any. On Android, Google is involved for app distribution (Google Play), for the purchase (Google Play Billing) and for the ML Kit diagnostics described above.</p>
 
   <h2 id="everyone">For everyone</h2>
 
@@ -110,7 +113,7 @@
   <h3>Your rights</h3>
   <p>Because SlimScan holds no personal data about you on any server, there is no account data to access, export, or delete on request — there simply isn't any. Anything SlimScan has ever "known" about your documents exists only on your own device, and deleting the app removes it completely. On Android, the diagnostics described above are held by Google under Google's privacy policy; we have no access to them.</p>
 
-  <h3>ID &amp; visa photo rules (iPhone)</h3>
+  <h3>ID &amp; visa photo rules</h3>
   <p>The ID &amp; Visa Photo feature uses typical published photo rules for each country and document. They were last compared on 11 Oct 2026 and are reviewed once a year. The checks in the app are only a guide: it is your responsibility to confirm the current rules with the issuing office before you apply, and SlimScan cannot guarantee that any photo will be accepted. Photos are prepared on your device and are never uploaded.</p>
 
   <h3>Changes to this policy</h3>
