@@ -50,14 +50,14 @@ a:hover { text-decoration-thickness: 2px; }
 
 .skip {
   position: absolute;
-  left: -9999px;
+  inset-inline-start: -9999px;
   top: 8px;
   z-index: 10;
   padding: 8px 16px;
   background: var(--bg);
   color: var(--text);
 }
-.skip:focus { left: 16px; outline: 3px solid var(--accent); }
+.skip:focus { inset-inline-start: 16px; outline: 3px solid var(--accent); }
 
 h1, h2, .eyebrow { text-wrap: balance; }
 
@@ -85,7 +85,7 @@ h1, h2, .eyebrow { text-wrap: balance; }
 
 .cross { width: 28px; height: 28px; flex: none; display: block; }
 
-.top nav { margin-left: auto; display: flex; gap: 20px; }
+.top nav { margin-inline-start: auto; display: flex; gap: 20px; }
 
 .top nav a {
   display: inline-flex;
@@ -233,7 +233,7 @@ h2 + .group { margin-top: 0; }
 /* Privacy */
 /* Travel */
 .intro { margin: 0 0 16px; max-width: 68ch; }
-.ticks { margin: 0 0 16px; padding-left: 20px; max-width: 68ch; }
+.ticks { margin: 0 0 16px; padding-inline-start: 20px; max-width: 68ch; }
 .ticks li { margin-bottom: 8px; }
 #travel .fine { margin: 0; font-size: 15px; color: var(--muted); max-width: 68ch; }
 
@@ -277,7 +277,7 @@ h2 + .group { margin-top: 0; }
 .doc h2 { margin: 40px 0 16px; padding-top: 24px; border-top: 1px solid var(--line); }
 .doc h3 { margin-top: 24px; }
 .doc .dek { color: var(--muted); font-size: 15px; margin: 0 0 24px; }
-.doc ul { padding-left: 24px; }
+.doc ul { padding-inline-start: 24px; }
 .doc li { margin-bottom: 4px; }
 
 .summary { border: 1px solid var(--line); border-radius: 3px; padding: 16px 20px; }
@@ -330,8 +330,10 @@ footer a:hover { color: var(--accent); }
 @media (max-width: 440px) {
   .wrap { padding: 0 16px; }
   .screens { margin: 24px -16px 0; padding: 0 16px 8px; }
-  .top nav { margin-left: 0; order: 3; width: 100%; }
-  .langs { margin-left: auto; }
+  .top nav { margin-inline-start: 0; order: 3; width: 100%; }
+  .langs { margin-inline-start: auto; }
+  .top { column-gap: 12px; }
+  .langs a { min-width: 36px; padding: 0 4px; } /* five languages fit beside the brand down to 360px */
   .btn { width: 100%; }
   .lead { font-size: 18px; }
   .hero-shot .shot { max-width: 200px; }
@@ -340,3 +342,7 @@ footer a:hover { color: var(--accent); }
 @media (prefers-reduced-motion: no-preference) {
   html { scroll-behavior: smooth; }
 }
+
+/* Arabic (right to left): letter-spacing breaks joined Arabic letters. */
+/* !important: must also beat more specific rules such as .langs a. */
+[dir="rtl"] *, [lang="ar"] { letter-spacing: 0 !important; }
